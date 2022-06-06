@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function insert(num){
+      document.getElementById("textview").value = document.getElementById("textview").value + num
+    }
+    function equal(){
+         var exp = document.getElementById("textview").value;
+          if(exp){
+              document.getElementById("textview").value = eval(exp) 
+          }
+}
+function clearnum(){
+  
+  document.getElementById("textview").value = " ";
+}
+function back(){
+  console.log("OK")
+  var exp = document.getElementById("textview").value;
+  document.getElementById("textview").value = exp.substring(0,exp.lentgth-1);
+
+}
+  </script>
+   <title>Calcolatrice</title>
+   <style>
+     button{
+       width: 50px;
+       height:50px;
+       font-size:25px;
+       margin: 2px;
+       background-color: red; 
+     }
+     #textview
+     {
+       width: 217px;
+       margin: 5px;
+       font-size: 25px;
+       padding: 5px;
+       background-color: orange;
+     }
+   </style>
+</head>
+<body>
+  <input id="textview">
+  <br>
+  <br>
+  <tr>
+    <td><button class="button" onclick="clearnum()"> C </button></td>
+    <td> <button class="button" onclick="back()"> B </button></td> 
+    <td><button class="button" value = "/"onclick="insert('/')"> / </button></td>
+    <td><button class="button"value= "*"onclick="insert('*')"> x </button></td>
+  </tr>
+  <br>
+  <td>
+  <button class="button"value="7" onclick= "insert(7)" >7</button>
+  
+  <button class="button"value="8"onclick="insert(8)">8</button>
+  <button class="button"value="9"onclick="insert(9)">9 </button>
+  <button class="button"value="-"onclick="insert('-')">-</button>
+  <br>
+  <button class="button"value="4"onclick="insert(4)">4</button>
+  <button class="button"value="5"onclick="insert(5)">5</button>
+  <button class="button"value="6"onclick="insert(6)">6</button>
+  <button class="button"value="+"onclick="insert('+')">+</button>
+  <br>
+  <button class="button"value="1"onclick="insert(1)">1</button>
+  <button class="button"value="2"onclick="insert(2)">2</button>
+  <button class="button"value="3"onclick="insert(3)">3</button>
+  <button class="button" value="="style="heigth: 110px;"onclick="equal()">=</button>
+  <br>
+  <button class="button" value="." onclick="insert('.')">.</button>
+  <button class="button" style="width: 166px;"value="0"onclick="insert('0')">0</button>
+  
+</td>
+    
+
+   
+  <script src="app.js"></script>      
+   
+    
+</body>
+   
+</html>
